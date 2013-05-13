@@ -53,7 +53,7 @@
               color:#000;
             }
 
-            ul li {
+            ul,li {
 line-height:10px;
               }
     </style>
@@ -484,7 +484,7 @@ if(xi<10){
           </section>
           <aside class="note">
             <section>
-              Welcome! (blueboy to et)
+              Welcome blueboy!
             </section>
           </aside>
 </div>
@@ -863,7 +863,15 @@ print <<<EOF
 
   <aside class="note">
   <section>
-  $y science
+  <b>$y science</b><br>
+  <ul style="text-align:left;display:inline;">
+  <li style="display:inline;">A&nbsp;</li>
+  <li style="display:inline;">B&nbsp;</li>
+  <li style="display:inline;">C&nbsp;</li>
+  <li style="display:inline;">D&nbsp;</li>
+  <li style="display:inline;">E</li>
+  </ul>
+
   </section>
 
   </div>
