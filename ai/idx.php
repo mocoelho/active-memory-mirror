@@ -151,6 +151,7 @@
 <div class="clearfix"></div>
 
  <script>
+
  var secureCb;
  var secureCbLabel;
  var wsUri;
@@ -545,13 +546,20 @@ if(xi<10){
 //--->
 <?php
 
+
 $sets=array("applied"      =>  "0.001-applied.txt.gz",
             "chemical"     =>  "0.001-chemical.txt.gz",
             "earth"        =>  "0.001-earth.txt.gz",
             "information"  =>  "0.001-information.txt.gz",
             "physical"     =>  "0.001-physical.txt.gz",
-            "big"          =>  "0.001-big.txt.gz",
-            "christian"    =>  "0.001-christian.txt.gz",
+            "astronomy"          =>  "0.001-astronomy.txt.gz",
+            "electronics"          =>  "0.001-electronics.txt.gz",
+            "engineering"          =>  "0.001-engineering.txt.gz",
+            "geography"          =>  "0.001-geography.txt.gz",
+            "mathematics"    =>  "0.001-mathematics.txt.gz",
+            "meteorology"    =>  "0.001-meteorology.txt.gz",
+            "statistics"    =>  "0.001-statistics.txt.gz",
+            "linguistics"    =>  "0.001-linguistics.txt.gz",
             "economic"     =>  "0.001-economic.txt.gz",
             "library"      =>  "0.001-library.txt.gz",
             "political"    =>  "0.001-political.txt.gz",
@@ -559,12 +567,12 @@ $sets=array("applied"      =>  "0.001-applied.txt.gz",
             "cognitive"    =>  "0.001-cognitive.txt.gz",
             "engineering"  =>  "0.001-engineering.txt.gz",
             "life"         =>  "0.001-life.txt.gz",
+            "neuro"         =>  "0.001-neuro.txt.gz",
             "psychological"=>  "0.001-psychological.txt.gz",
             "biologicalx"  =>  "0.001-biologicalx.txt.gz",
             "computer"     =>  "0.001-computer.txt.gz",
             "environmental"=>  "0.001-environmental.txt.gz",
             "medical"      =>  "0.001-medical.txt.gz",
-            "science"      =>  "0.001-science.txt.gz",
             "biomedical"   =>  "0.001-biomedical.txt.gz",
             "creation"     =>  "0.001-creation.txt.gz",
             "genetic"      =>  "0.001-genetic.txt.gz",
@@ -612,13 +620,29 @@ EOF;
 }
 ?>
       </div> <!-- slides -->
-      <div id="speaker-note" class="invisible" style="display: none;">1
+      <div id="speaker-note" class="invisible"  style="display:none;">
       </div>
+      <script>
+
+ function goto(ins)
+ {
+   if(ins){
+       window.open(
+  ins.toString(),
+  '_blank' // <- This is what makes it open in a new window.
+);   }
+
+ }
+
+      </script>
       <!-- speaker note -->
-      <aside id="help" class="sidebar" style="display: none;">
-        <table>
-          <caption style="color:green">Active Memory</caption>
+      <aside id="help" class="sidebar" >
+        <table style="font-size:10px;" cellspacing="1" cellpadding=1>
+
           <tbody>
+            <tr>
+              <td colspan="2"><h4>Menu</h4></td>
+            </tr>
             <tr>
               <th>Move Around</th>
               <td>&larr;&nbsp;&rarr;</td>
@@ -632,9 +656,34 @@ EOF;
               <td>n</td>
             </tr>
             <tr>
+              <th>Toggle Menu</th>
+              <td>0</td>
+            </tr>
+            <tr>
               <th>Toggle 3D</th>
               <td>3</td>
             </tr>
+            <tr>
+              <td colspan="2"><h4>Science Packages</h4></td>
+            </tr>
+
+<?php
+
+foreach($sets as $y => $k) {
+
+$k = substr($k,0,5);
+print <<<EOF
+<tr>
+<th colspan="2"><a style="width:100%;color:blue;" href="#" onClick=goto('http://localhost/ai/idx.php#controls-slide-$y');>$y <div style="float:right;">v. $k</div></a></th>
+
+</tr>
+
+EOF;
+
+
+}
+?>
+
           </tbody>
         </table>
       </aside>
