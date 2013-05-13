@@ -1,0 +1,52 @@
+<h2>latest local search <b>portugal|lisabon</b></h2>
+  <script>
+
+
+function ucfirst(incomming){ return incomming.charAt(0).toUpperCase() + incomming.substring(1);}
+
+function goTo(thisid,type,additional){
+ var ident = "";
+ switch (type) {
+ case -1:
+ ident = additional+"#"+$(thisid).html();
+ break;
+ case 0:
+ ident = "Category:"+$(thisid).html();
+ break;
+ case 1:
+ ident = "List_of_"+$(thisid).html();
+ break;
+ case 2:
+ ident = ""+$(thisid).html();
+ break;
+ }
+ if(!ident.match("http://")){
+ ident = "http://en.wikipedia.org/wiki/"+ucfirst(ident.replace(/ /g,"_"));
+ }
+ window.open(
+ ident.toString(),
+ '_blank'
+);
+}
+
+
+  </script>
+<pre><div style='color:green;zoom:80%;'>
+(2)
+..................................................
+<li onClick=goTo(this,'M260_R435_P632','John_III_of_Portugal'); >John_III_of_Portugal.json</li><li onClick=goTo(this,'M260_R435_P632','Portugal'); >Portugal.json</li>
+(1)
+..........................................................
+<li onClick=goTo(this,'M260_R435_R256_P632','Regeneration_(Portugal)'); >Regeneration_(Portugal).json</li>
+(1)
+.......................................................................
+<li onClick=goTo(this,'M260_R435_A565_M521_P632','Amarante_Municipality,_Portugal'); >Amarante_Municipality,_Portugal.json</li>
+(1)
+................................................................
+<li onClick=goTo(this,'M260_R435_H560_C530_P632','Henry,_Count_of_Portugal'); >Henry,_Count_of_Portugal.json</li>
+(1)
+..................................................................
+<li onClick=goTo(this,'M260_R435_O636_C623_P632','Order_of_Christ_(Portugal)'); >Order_of_Christ_(Portugal).json</li>
+(1)
+...........................................................................
+<li onClick=goTo(this,'M260_R435_P142_D526_P632','Peoples_Democratic_Union_(Portugal)'); >Peoples_Democratic_Union_(Portugal).json</li></div></pre>
