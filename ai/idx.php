@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html><!DOCTYPE html>
 <html>
   <head>
@@ -51,6 +53,9 @@
               color:#000;
             }
 
+            ul li {
+line-height:10px;
+              }
     </style>
 
   <title>You are not alone</title>
@@ -547,47 +552,234 @@ if(xi<10){
 <?php
 
 
-$sets=array("applied"      =>  "0.001-applied.txt.gz",
-            "chemical"     =>  "0.001-chemical.txt.gz",
-            "earth"        =>  "0.001-earth.txt.gz",
-            "information"  =>  "0.001-information.txt.gz",
-            "physical"     =>  "0.001-physical.txt.gz",
-            "astronomy"          =>  "0.001-astronomy.txt.gz",
-            "electronics"          =>  "0.001-electronics.txt.gz",
-            "engineering"          =>  "0.001-engineering.txt.gz",
-            "geography"          =>  "0.001-geography.txt.gz",
-            "mathematics"    =>  "0.001-mathematics.txt.gz",
-            "meteorology"    =>  "0.001-meteorology.txt.gz",
-            "statistics"    =>  "0.001-statistics.txt.gz",
-            "linguistics"    =>  "0.001-linguistics.txt.gz",
-            "economic"     =>  "0.001-economic.txt.gz",
-            "library"      =>  "0.001-library.txt.gz",
-            "political"    =>  "0.001-political.txt.gz",
-            "biological"   =>  "0.001-biological.txt.gz",
-            "cognitive"    =>  "0.001-cognitive.txt.gz",
-            "engineering"  =>  "0.001-engineering.txt.gz",
-            "life"         =>  "0.001-life.txt.gz",
-            "neuro"         =>  "0.001-neuro.txt.gz",
-            "psychological"=>  "0.001-psychological.txt.gz",
-            "biologicalx"  =>  "0.001-biologicalx.txt.gz",
-            "computer"     =>  "0.001-computer.txt.gz",
-            "environmental"=>  "0.001-environmental.txt.gz",
-            "medical"      =>  "0.001-medical.txt.gz",
-            "biomedical"   =>  "0.001-biomedical.txt.gz",
-            "creation"     =>  "0.001-creation.txt.gz",
-            "genetic"      =>  "0.001-genetic.txt.gz",
-            "military"     =>  "0.001-military.txt.gz",
-            "social"       =>  "0.001-social.txt.gz",
-            "brain"        =>  "0.001-brain.txt.gz",
-            "domestic"     =>  "0.001-domestic.txt.gz",
-            "geophysical"  =>  "0.001-geophysical.txt.gz",
-            "natural"      =>  "0.001-natural.txt.gz",
-            "zoological"   =>  "0.001-zoological.txt.gz");
+$sets=array(
+            "chemical"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-chemical.txt.gz"),
+            "earth"        => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-earth.txt.gz"),
+            "information"  => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-information.txt.gz"),
+            "physical"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-physical.txt.gz"),
+            "astronomy"          => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-astronomy.txt.gz"),
+            "electronics"          => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-electronics.txt.gz"),
+            "engineering"          => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-engineering.txt.gz"),
+            "geography"          => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-geography.txt.gz"),
+            "mathematics"    => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-mathematics.txt.gz"),
+            "meteorology"    => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-meteorology.txt.gz"),
+            "statistics"    => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-statistics.txt.gz"),
+            "linguistics"    => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-linguistics.txt.gz"),
+            "economic"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-economic.txt.gz"),
+            "library"      => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-library.txt.gz"),
+            "political"    => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-political.txt.gz"),
+            "biological"   => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-biological.txt.gz"),
+            "cognitive"    => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-cognitive.txt.gz"),
+            "engineering"  => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-engineering.txt.gz"),
+            "life"         => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-life.txt.gz"),
+            "neuro"         => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-neuro.txt.gz"),
+            "psychological"=> array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-psychological.txt.gz"),
+            "biologicalx"  => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-biologicalx.txt.gz"),
+            "computer"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-computer.txt.gz"),
+            "environmental"=> array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-environmental.txt.gz"),
+            "medical"      => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-medical.txt.gz"),
+            "biomedical"   => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-biomedical.txt.gz"),
+            "creation"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-creation.txt.gz"),
+            "genetic"      => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-genetic.txt.gz"),
+            "military"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-military.txt.gz"),
+            "social"       => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-social.txt.gz"),
+            "brain"        => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-brain.txt.gz"),
+            "domestic"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-domestic.txt.gz"),
+            "geophysical"  => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-geophysical.txt.gz"),
+            "natural"      => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-natural.txt.gz"),
+            "zoological"   =>  array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-zoological.txt.gz"),
+            "ufos"   =>  array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-ufos.txt.gz"));
+
 
 
 $ae = $sets;
 foreach($ae as $y => $k) {
 
+$concept = $k["concepts"];
+$lastupdate = sprintf("%d",(time()-$k["lastupdate"])/(3600*24));
+$contributors = $k["contributors"];
+$fitnes = $k["fitnes"];
+$fitneslogical = $k["fitnes-logic"];
 print <<<EOF
 <div class="slide" id="controls-slide-$y">
   <header>&nbsp;&nbsp;&nbsp;&rarr;&nbsp;&nbsp;&nbsp;<b>$y science</b></header>
@@ -599,14 +791,19 @@ print <<<EOF
   bottom: 2px;
   }
   </style>
-
-
   <section class="middle">
-  <br>
-  <img src="./lib/images/brain.png" style="zoom:25%;">
+  <img src="./lib/images/brain.png" style="zoom:12%;">
 
-  <p>Download Active Memory default for <b>$y science</b> <a href="./lib/down/$k">$k</a></p>
+  <p>Download Active Memory default for <b>$y science</b> <a href="./lib/down/{$k["tarball"]}">{$k["tarball"]}</a></p>
+<ul style="text-align:left;">
+  <li>concepts:<b>$concept</b></li>
+  <li>physical fitnes:<b>$fitnes%</b></li>
+  <li>locigal fitnes:<b>$fitneslogical%</b></li>
+  <li>last update:<b>$lastupdate</b> days ago</li>
+  <li>contributors:<b>$contributors</b></li>
+  </ul>
   </section>
+
   <aside class="note">
   <section>
   $y science
@@ -671,10 +868,10 @@ EOF;
 
 foreach($sets as $y => $k) {
 
-$k = substr($k,0,5);
+$k[1] = substr($k["tarball"],0,5);
 print <<<EOF
 <tr>
-<th colspan="2"><a style="width:100%;color:blue;" href="#" onClick=goto('http://localhost/ai/idx.php#controls-slide-$y');>$y <div style="float:right;">v. $k</div></a></th>
+<th colspan="2"><a style="width:100%;color:blue;" href="#" onClick=goto('http://localhost/ai/idx.php#controls-slide-$y');>$y <div style="float:right;">v. $k[1]</div></a></th>
 
 </tr>
 
