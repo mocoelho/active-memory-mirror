@@ -550,9 +550,66 @@ if(xi<10){
 
 //--->
 <?php
-
+#microbiology
+#virology
+#epidemiology
+#archaeology
+#artificial-intelligence
+#energy
 
 $sets=array(
+
+            "microbiology"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-microbiology.txt.gz"),
+
+            "virology"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-virology.txt.gz"),
+
+
+            "epidemiology"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-epidemiology.txt.gz"),
+
+
+            "artificial-intelligence"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-artificial-intelligence.txt.gz"),
+            "archaeology"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-archaeology.txt.gz"),
+
+
+            "chemical"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-chemical.txt.gz"),
+            "energy"     => array("concepts"=>rand(0,200000),
+"lastupdate"=>(time()-rand(0,3600*1000)),
+"contributors"=>rand(0,2000),
+"fitnes"=>rand(0,100),
+"fitnes-logic"=>rand(0,100),
+"tarball"=>"0.001-energy.txt.gz"),
+
+
             "chemical"     => array("concepts"=>rand(0,200000),
 "lastupdate"=>(time()-rand(0,3600*1000)),
 "contributors"=>rand(0,2000),
@@ -834,7 +891,7 @@ EOF;
       </script>
       <!-- speaker note -->
       <aside id="help" class="sidebar" >
-        <table style="font-size:10px;" cellspacing="1" cellpadding=1>
+        <table style="font-size:10px;" cellspacing="1" cellpadding="1" width="200px">
 
           <tbody>
             <tr>
@@ -871,7 +928,7 @@ foreach($sets as $y => $k) {
 $k[1] = substr($k["tarball"],0,5);
 print <<<EOF
 <tr>
-<th colspan="2"><a style="width:100%;color:blue;" href="#" onClick=goto('http://localhost/ai/idx.php#controls-slide-$y');>$y <div style="float:right;">v. $k[1]</div></a></th>
+<th colspan="2"><a style="width:100%;zoom:98%;color:blue;" href="#" onClick=goto('http://localhost/ai/idx.php#controls-slide-$y');>$y<div style="float:right;">$k[1]</div></a></th>
 
 </tr>
 
